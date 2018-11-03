@@ -1,0 +1,57 @@
+h1,h2{
+  font-weight:100;
+}
+
+.text-white{
+  color:#fff;
+}
+
+.text-black{
+  color:#000;
+}
+
+.btn-white{
+  color:#fff;
+  border:1px solid #fff;
+  padding-top:15px;
+  padding-bottom:15px;
+  font-size:20px;
+  background-color:rgba(0,0,0,0.0);
+
+  &:hover{
+    color:#fff;
+  }
+}
+
+
+.btn-black{
+  color:#000;
+  border:1px solid #000;
+  padding-top:15px;
+  padding-bottom:15px;
+  font-size:20px;
+  background-color:rgba(0,0,0,0.0);
+
+  &:hover{
+    color:#000;
+  }
+}
+
+.users-new-wrapper{
+  width:100vw;
+  height:100vh;
+  background-image:image-url('session.jpg');
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
+  background-color: #464646;
+
+  .users-new-container{
+    padding-top:220px;
+
+    .form-group{
+      margin-bottom:20px;
+    }
+  }
+}
