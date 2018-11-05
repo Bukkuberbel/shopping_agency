@@ -1,2 +1,27 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class = "user-show-wrapper">
+  <div class = "container">
+    <div class = "row">
+      <div class = "col-md-6">
+        <div class = "back-home">
+          <%= link_to "買い物一覧に戻る", root_path, class: 'btn btn-show-black' %>
+          <%= link_to "ユーザー情報を編集する", edit_user_path, class: 'btn btn-show-black btn-secound' %>
+          <%= link_to "ユーザー一覧に戻る", users_path, class: 'btn btn-show-black btn-secound' %>
+        </div>
+        <div class = "user-intro">
+          <div class = "user-img">
+            <% if @user.picture %>
+              <%= image_tag @user.picture.url, :width => '200', :height => '220' %><br>
+            <% else %>
+             <%= image_tag "118282b.jpg" %><br>
+            <% end %>
+          </div>
+          <p>ユーザー名:<%= @user.name %></p><br>
+          <div class="user-profile">
+            <p><%= @user.profile %></p><br>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+  </div>
+ </div>

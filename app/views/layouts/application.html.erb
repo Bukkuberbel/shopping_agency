@@ -9,6 +9,47 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <nav class = "navbar navbar-default navbar-fixed-top navbar-transparent">
+        <div class = "container">
+          <ul class = "nav nabvar-nav navbar-right">
+            <% if logged_in? %>
+            <li class= "box">
+              <%= link_to logout_path, method: :delete do %>
+              <%= image_tag '142005.png' %>
+              <% end %>
+            </li>
+              <li class= "box">
+                <%= link_to carts_path do %>
+                 <%= image_tag '165203.png' %>
+                <% end %>
+              </li>
+              <li class = "box">
+                <%= link_to user_path(id: current_user.id) do %>
+                  <%= image_tag '115777.png' %>
+                <% end %>
+              </li>
+              <li class="box">
+                <%= link_to new_product_path do %>
+                  <%= image_tag '146798.png' %>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </nav>
+     </header>
+        <% if flash[:notice] %>
+         <div class = "alert alert-success">
+         <%= flash[:notice] %>
+         </div>
+         <% end %>
+         <% if flash[:alert] %>
+         <div class = "alert alert-danger">
+           <%= flash[:alert] %>
+         </div>
+         <% end %>
+
+        <%= yield %>
   </body>
 </html>
