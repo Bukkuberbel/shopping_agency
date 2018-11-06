@@ -16,7 +16,7 @@ class PictureUploader < CarrierWave::Uploader::Base
 
 
   def default_url
-    "118282b.jpg"
+    "118282.jpg"
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:

@@ -6,11 +6,13 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @cart = Cart.find(params[:id])
   end
 
   def create
     @product = Product.new(product_params)
-    if current_user.products.create(product_params)
+    @product.user = current_user
+    if @product.save
       redirect_to cart_path(product_id: params[:product_id]), notice: '買い物かごにいれる'
     else
       flash.now[:alert] = "買い物かごに入れられませんでした"

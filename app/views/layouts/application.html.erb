@@ -16,22 +16,22 @@
             <% if logged_in? %>
             <li class= "box">
               <%= link_to logout_path, method: :delete do %>
-              <%= image_tag '142005.png' %>
+              <%= image_tag '142005b.png' %>
               <% end %>
             </li>
               <li class= "box">
                 <%= link_to carts_path do %>
-                 <%= image_tag '165203.png' %>
+                 <%= image_tag '165203b.png' %>
                 <% end %>
               </li>
               <li class = "box">
                 <%= link_to user_path(id: current_user.id) do %>
-                  <%= image_tag '115777.png' %>
+                  <%= image_tag '115777b.png' %>
                 <% end %>
               </li>
               <li class="box">
-                <%= link_to new_product_path do %>
-                  <%= image_tag '146798.png' %>
+                <%= link_to new_cart_product_path(id: cart.id) do %>
+                  <%= image_tag '146798b.png' %>
                 <% end %>
               </li>
             <% end %>
